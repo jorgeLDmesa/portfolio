@@ -1,15 +1,11 @@
-import gamestackTexture2Large from '~/assets/gamestack-list-large.jpg';
-import gamestackTexture2Placeholder from '~/assets/gamestack-list-placeholder.jpg';
-import gamestackTexture2 from '~/assets/gamestack-list.jpg';
-import gamestackTextureLarge from '~/assets/gamestack-login-large.jpg';
-import gamestackTexturePlaceholder from '~/assets/gamestack-login-placeholder.jpg';
-import gamestackTexture from '~/assets/gamestack-login.jpg';
 import sliceTextureLarge from '~/assets/slice-app-large.jpg';
 import sliceTexturePlaceholder from '~/assets/slice-app-placeholder.jpg';
 import sliceTexture from '~/assets/slice-app.jpg';
+import sliceWeb from '~/assets/webcam-app.png';
 import sprTextureLarge from '~/assets/spr-lesson-builder-dark-large.jpg';
 import sprTexturePlaceholder from '~/assets/spr-lesson-builder-dark-placeholder.jpg';
-import sprTexture from '~/assets/spr-lesson-builder-dark.jpg';
+// import sprTexture from '~/assets/spr-lesson-builder-dark.jpg';
+import sprGNN from '~/assets/GNN.jpg';
 import { Footer } from '~/components/footer';
 import { baseMeta } from '~/utils/meta';
 import { Intro } from './intro';
@@ -103,16 +99,16 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Designing the future of education"
-        description="Designing a platform to help educators build better online courseware"
+        title="B-Tagging with Graph Neural Networks for CERN"
+        description="This degree project explores the cutting-edge application of graph neural networks (GNNs) for b-tagging in particle physics experiments at CERN. Utilizing PyTorch alongside essential data science libraries (Numpy, Pandas, Matplotlib, and Scikit-learn), it demonstrates the development of sophisticated GNN models capable of identifying b-quarks in complex collision data. The training process leveraged Monte Carlo collision simulations processed with ROOT, CERN's C++ framework, showcasing an integration of machine learning with high-energy physics research."
         buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        buttonLink="https://github.com/jorgeluisd14"
         model={{
           type: 'laptop',
           alt: 'Smart Sparrow lesson builder',
           textures: [
             {
-              srcSet: `${sprTexture} 1280w, ${sprTextureLarge} 2560w`,
+              srcSet: `${sprGNN} 1280w, ${sprTextureLarge} 2560w`,
               placeholder: sprTexturePlaceholder,
             },
           ],
@@ -124,21 +120,17 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Video game progress tracking"
-        description="Design and development for a video game tracking app built in React Native"
+        title="SAAS Facial Recognition for Recording Work Hours"
+        description="Creation of a SAAS system for recording work hours through facial recognition, implementing technologies such as JavaScript, FastAPI, OpenCV, Supabase (PostgreSQL) and Plotly Dash for data visualization."
         buttonText="View website"
-        buttonLink="https://gamestack.hamishw.com"
+        buttonLink="https://github.com/jorgeluisd14"
         model={{
-          type: 'phone',
-          alt: 'App login screen',
+          type: 'laptop',
+          alt: 'Smart Sparrow lesson builder',
           textures: [
             {
-              srcSet: `${gamestackTexture} 375w, ${gamestackTextureLarge} 750w`,
-              placeholder: gamestackTexturePlaceholder,
-            },
-            {
-              srcSet: `${gamestackTexture2} 375w, ${gamestackTexture2Large} 750w`,
-              placeholder: gamestackTexture2Placeholder,
+              srcSet: `${sliceWeb} 1280w, ${sprTextureLarge} 2560w`,
+              placeholder: sprTexturePlaceholder,
             },
           ],
         }}
@@ -148,8 +140,8 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Biomedical image collaboration"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
+        title="OrderBot Pro: Python & Telegram API for Restaurant Automation, with Firebase & AWS"
+        description="OrderBot Pro elevates restaurant service efficiency by combining a Python-developed Telegram chatbot with Google Firebase's real-time database and AWS cloud hosting. This project outlines how the Telegram API facilitates smooth order transactions while Firebase ensures live data synchronization for order tracking and analytics. The integration with a React dashboard developed in JavaScript provides a compelling user interface for real-time order and sales monitoring"
         buttonText="View project"
         buttonLink="/projects/slice"
         model={{

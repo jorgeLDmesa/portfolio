@@ -12,7 +12,6 @@ import { Text } from '~/components/text';
 import { Transition } from '~/components/transition';
 import { Fragment, useState } from 'react';
 import { media } from '~/utils/style';
-import katakana from './katakana.svg';
 import styles from './profile.module.css';
 
 const ProfileText = ({ visible, titleId }) => (
@@ -21,16 +20,7 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Hamish, currently I live in Sydney working as a senior product designer at{' '}
-      <Link href="https://www.qwilr.com">Qwilr</Link>. My projects include UX design, UI
-      animations, and icon illustration. Being comfortable with code allows me to rapidly
-      prototype and validate experiences. If you’re interested in the tools and software I
-      use check out my <Link href="/uses">uses page</Link>.
-    </Text>
-    <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my spare time I like to practice Brazilian Jiu Jitsu, play video games, and{' '}
-      <Link href="/projects/volkihar-knight">make mods</Link>. I’m always down for hearing
-      about new projects, so feel free to drop me a line.
+    "I'm physicist from the University of Antioquia, my academic and professional journey intertwines the principles of physics with cutting-edge technology. With a deep passion for programming and machine learning, I've applied my skills in various domains, including a degree work in collaboration with the CERN CMS experiment, utilizing graph neural networks to delve into complex particle physics data. Currently, I'm shaping the future of AI by developing intelligent assistants at <Link href="https://brai.vercel.app">Brai</Link>. My past ventures include pioneering in smart agriculture through the automation of hydroponic crops with AI and Arduino technology at <Link href="www.brai.vercel.app">Grin</Link>. My pursuit is characterized by a relentless drive to fuse scientific inquiry with technological innovation, tackling sophisticated challenges at the nexus of science and software."{' '}
     </Text>
   </Fragment>
 );
@@ -59,7 +49,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
                 secondary
                 className={styles.button}
                 data-visible={visible}
-                href="/contact"
+                href="mailto:george66david@gmail.com?subject=Contact from Portfolio Website"
                 icon="send"
               >
                 Send me a message
@@ -88,9 +78,6 @@ export const Profile = ({ id, visible, sectionRef }) => {
                   sizes={`(max-width: ${media.mobile}px) 100vw, 480px`}
                   alt="Me smiling like a goofball at the Qwilr office in Sydney"
                 />
-                <svg className={styles.svg} data-visible={visible} viewBox="0 0 136 766">
-                  <use href={`${katakana}#katakana-profile`} />
-                </svg>
               </div>
             </div>
           </div>
